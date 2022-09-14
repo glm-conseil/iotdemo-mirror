@@ -14,7 +14,7 @@ sim.start(client)
 
 app.use(express.static('public'))
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.sendFile('index.html')
 })
 
 app.get('/toggleAlarm/:machinenumber', (req, res) => {

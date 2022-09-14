@@ -35,6 +35,7 @@ class plcSimulator {
             newMachine(),
             newMachine(),
             newMachine(),
+            newMachine(),
         ]
     }
 
