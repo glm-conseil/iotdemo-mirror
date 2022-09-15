@@ -40,10 +40,16 @@ class plcSimulator {
     }
 
     tick(machine){
-        const running = !machine.moldLocked
-        machine.moldLocked = running
-        machine.runAuto = running
-        machine.jogStop = !running
+        if(machine.alarm === false) {
+            const running = !machine.moldLocked
+            machine.moldLocked = running
+            machine.runAuto = running
+            machine.jogStop = !running
+        }else{
+            machine.moldLocked = 0;
+            machine.runAuto = 0; 
+            machine.jogStop = 0;
+        }
     }
 
     start(client){
